@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+.high_ul {
+    height: 50px;
+    background-color: #A5C000;
+}
+
+.high_left li.active a{
+    background-color: white;
+}
+
+:root {
+    --content-width: 1200px;
+    --default-font-size: 13px;
+    --default-font-color: #666;
+    --default-font-family: "Nanum Gothic", '맑은 고딕', 'Malgun Gothic', 'Dotum', '돋움', 'gulim', '굴림', Helvetica, sans-serif;
+    --primary-color: #8e9125;
+}
+
+/*초기화 작업*/
+* {
+    outline: none;
+    box-sizing: border-box;
+    font-family: var(--default-font-family);
+}
+
+html {
+    font-size: var(--default-font-size);
+}
+
+body {
+    margin: 0;
+    color: var(--default-font-color);
+}
+
+ul, ol, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+/* 공통 */
+.content-width {
+    max-width: var(--content-width);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
+}
+
+/* 상단 로고, 메뉴 영역 S*/
+.top-banner {
+    height: 190px;
+    background:url("../../img/play_images/brandVisual3.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.top-banner > .content-width {
+    position: relative;
+    height: 190px;
+} 
+
+.top-banner .breadcrumb {
+    position: absolute;
+    bottom: 50px; 
+    right: 50px;
+    color: #fff; 
+}
+
+nav.hero {
+    height: 46px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 40px;
+}
+
+nav.hero > .content-width {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    height: 45px;
+}
+
+nav.hero > .content-width a {
+    flex-grow: 1;
+    width: 0;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    color: var(--default-font-color);
+}
+
+nav.hero > .content-width a.on {
+    color: var(--primary-color);
+    position: relative;
+}
+nav.hero > .content-width a.on::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -1px;
+    left: 0;
+    background: var(--primary-color);
+}
+
+.main-banner {
+    position: relative;
+    z-index: 0;
+}
+
+.main-banner .content-width {
+    position: relative;
+    z-index: 1;
+}
+
+.main-banner img {
+    display: block;
+    margin: 0 auto;
+}
+
+.main-banner .title {
+    position: absolute;
+    top: 3%;
+    left: 170px;
+    text-align: right;
+    font-size: 20px;
+}
+
+.main-banner .sub_title {
+    position: absolute;
+    top: 12%;
+    left: 80px;
+    text-align: right;
+    line-height: 1.8rem;
+}
+
+.main-banner::before {
+    content: '';
+    display: block;
+    height: 244px;
+    background: #f6f6f6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+}
+
+.circle_box {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_box {
+    background:url("../../img/play_images/galleryYearBg.gif") no-repeat center center;
+    /* position: relative; */
+    width: 180px;
+    height: 180px;
+
+}
+
+.img_box h1{
+    display: flex;
+    height:125px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* .banner {
+    position: relative;
+    width: 1920px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.banner img {
+    display: block;
+    width: 100%;
+}
+
+.banner a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.breadcrumb {
+    position: absolute; /*이미지 겹치기*/
+
+    /* right: 445px;
+    bottom: 60px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 8px;
+
+    color: white;
+} */
+
+/* .hero {
+    display: flex1;
+    flex-direction: row;
+    background-position: left 100px top 50%;
+}
+
+.hero li a {
+    text-decoration: none;
+    color: #666; */
+/* } */
+/* 상단 로고, 메뉴 영역 E */
+
+/* 본문 영역 S */
+/* .container {
+    width: 1920px;
+    margin: 0 auto;
+}
+
+.main {
+    width: 100%;
+    position: absolute;
+    padding: ;
+}
+
+.title {
+    color: #8e9125;
+    font-size: 40px;
+    letter-spacing: -0.2rem;
+    font-weight: 500;
+    word-spacing: 0.25px;
+}
+
+.sub_title {
+    color: #666;
+    font-weight: 400;
+    word-spacing: 0.25px;
+}
+
+.text {
+    color: #332f21;
+    font-weight: 400;
+    word-spacing: 0.25px;
+}
+
+.img_box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+.img_text {
+    position: absolute;
+    text-align: center;
+} */
+/* 본문 영역 E */

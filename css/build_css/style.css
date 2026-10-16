@@ -1,0 +1,227 @@
+/* =========================================
+   공통 초기화 (Reset) 및 기본 설정
+========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Malgun Gothic', sans-serif;
+    color: #333;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}
+
+ul, ol, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+/* 1. 헤더 영역 (Header) */
+.site-header {
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* 1-1. 탑 바 (유틸리티 메뉴) */
+.top-util-menu {
+    display: flex;
+    justify-content: space-between; /* 좌우 양 끝으로 밀어내기 */
+    background-color: #8cc63f; /* 상하농원 브랜드 그린 컬러 */
+    padding: 10px 40px;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.top-util-menu a {
+    color: #ffffff;
+}
+
+.util-left, .util-right {
+    display: flex;
+    gap: 20px; /* 메뉴 사이 간격 */
+    font: #ffffff;
+}
+
+/* 1-2. 메인 네비게이션 */
+.global-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 가운데 정렬 */
+    padding: 20px 40px;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 40px; /* 로고는 왼쪽으로 고정 */
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 2-4. 공방 상세 설명 및 생산일정 */
+.detail-and-schedule-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column; /* 두 개의 행을 위아래로 */
+}
+
+.content-row {
+    display: flex; /* 한 행 안에서 좌우 배치를 위한 Flex */
+    width: 100%;
+    height: 400px; /* 좌우 상자의 높이를 동일하게 */
+}
+
+/* 좌우 영역을 정확히 1:1 비율 */
+.image-area, .text-area, .schedule-area {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.image-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지가 찌그러지지 않고 영역 꽉 채우도록 */
+}
+
+/* 색상 배경 영역 */
+.green-bg {
+    background-color: #8ab70a;
+    color: #ffffff;
+}
+
+.brown-bg {
+    background-color: #5c4738;
+    color: #ffffff;
+}
+
+/* 생산 일정표 테이블 디자인 */
+.schedule-table {
+    width: 80%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* 반투명 흰색 선 */
+}
+
+.notice {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* 3. 하단 푸터 (Footer) */
+.site-footer {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    font-size: 13px;
+    color: #666666;
+    border-top: 1px solid #dddddd;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: stretch; /* 자식 요소(5개의 열)들의 높이 - 가장 긴 열에 맞춰 동일하게 */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+/* 공통 세로 정렬 (가로 배치할 cs-center는 그룹에서 제외) */
+.footer-logo-area, .footer-links, .company-info, .app-download {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* [열 1] 로고 & 저작권 정보 */
+.footer-logo-area {
+    /* 부모 높이 안에서 요소를 위아래 끝으로 밀어내기 (상단정렬+하단정렬) */
+    justify-content: space-between; 
+}
+
+.copyright-info {
+    /*  margin-top: auto; -> 위쪽 여백을 모두 차지하며 하단에 딱 붙음 */
+    margin-top: auto; 
+    font-size: 12px;
+    color: #888;
+}
+
+/* [열 2 & 3] 링크 및 주소 */
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links .highlight {
+    font-weight: bold;
+    color: #333333;
+}
+
+/* [열 4]  */
+.cs-center {
+    display: flex;
+    flex-direction: row; /* 세로(column)에서 가로(row) 나란히 배치로 변경 */
+    gap: 40px; /* 두 연락처 사이의 간격 */
+}
+
+.cs-center .cs-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 아이콘, 번호, 텍스트를 가운데 정렬 */
+}
+
+.cs-center strong {
+    font-size: 18px;
+    color: #333333;
+    margin: 5px 0;
+}
+
+/* [열 5] 앱 다운로드 */
+.qr-codes {
+    display: flex;
+    gap: 10px;
+}
+
+.qr-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}

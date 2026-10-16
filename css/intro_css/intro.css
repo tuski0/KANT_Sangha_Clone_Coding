@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Malgun Gothic", sans-serif;
+    background-color: #f5f5f5;
+}
+
+.top-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+    padding: 0 10%;
+    background-color: #aec43a;
+}
+
+.main-menu,
+.member-menu,
+.sub-menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-menu,
+.member-menu {
+    gap: 10px;
+}
+
+.main-menu a,
+.member-menu a,
+.sub-menu a {
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.main-menu a {
+    margin-right: 8px;
+}
+
+.member-menu {
+    gap: 12px;
+}
+
+.divider {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cart-count {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #4a5d1a;
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+    margin-left: 6px;
+    font-weight: bold;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    min-height: 90px;
+    padding: 0 10%;
+    background-color: #f7f9f9;
+}
+
+.logo-wrap {
+    flex: 0 0 180px;
+}
+
+.logo-wrap img {
+    display: block;
+    width: 180px;
+    height: auto;
+}
+
+.sub-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 90px;
+}
+
+.sub-menu a {
+    color: #111;
+    font-size: 18px;
+}
+
+.hero {
+    position: relative;
+    min-height: auto;
+    background-image: url('../../img/intro_images/1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 0 10%;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 300;
+    letter-spacing: -2px;
+}
+
+.breadcrumb {
+    margin-top: 200px;
+    font-size: 16px;
+    opacity: 1;
+    text-align: right;
+}
+
+/* --- 서브 탭 메뉴 --- */
+.sub-tab {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.sub-tab a {
+    text-decoration: none;
+    color: #666;
+    font-size: 16px;
+}
+
+.sub-tab a.on {
+    color: #4a5d1a;
+    font-weight: bold;
+    border-bottom: 2px solid #4a5d1a;
+    padding-bottom: 4px;
+}
+
+/* --- 본문 스토리 영역 --- */
+.story-wrap {
+    background-color: #f5f5f5;
+    background-image: url('../../img/intro_images/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding: 50px 0 80px;
+    text-align: center;
+}
+
+.story-title .sub-tit {
+    color: #4a5d1a;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.story-title h2 {
+    color: #333;
+    font-size: 24px;
+    margin: 0 0 40px;
+}
+
+.story-img img,
+.letter-img img {
+    max-width: 900px;
+    width: 90%;
+    height: auto;
+}
+
+.letter-img {
+    margin: 30px 0 70px;
+}
+
+/* --- 키워드 3단 박스 --- */
+.keyword-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.keyword-box {
+    width: 320px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.keyword-box img {
+    height: 35px;
+    margin-bottom: 15px;
+}
+
+.box-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5;
+    margin: 0 0 15px;
+}
+
+.box-text {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- 푸터 영역 --- */
+.footer {
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+    padding: 30px 10%;
+    font-size: 13px;
+    color: #666;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo {
+    width: 120px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    margin: 4px 0;
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 6px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footer-contact img {
+    width: 18px;
+    height: 18px;
+}
+
+.footer-qr p {
+    margin: 0 0 6px;
+    font-weight: bold;
+}
+
+.footer-qr img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin-right: 5px;
+}

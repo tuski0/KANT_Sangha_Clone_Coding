@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상하농원 짓다 HTML/CSS 클론코딩</title>
+
+    <link rel="stylesheet" href="./css/build_css/style.css">
+</head>
+<body>
+    <!-- 1. 헤더 -->
+    <header class="site-header">
+        
+        <!-- 1-1. 탑 바 -->
+        <div class="top-util-menu">
+            <!-- Flexbox 양 끝 배치용 왼쪽,오른쪽 클래스 분리 -->
+            <ul class="util-left">
+                <li><a href="index.html">상하농원</a></li>
+                <li><a href="#">체험예약</a></li>
+                <li><a href="book.html">객실예약</a></li>
+                <li><a href="#">제품구매</a></li>
+            </ul>
+            <ul class="util-right">
+                <li><a href="#">비회원 주문/예약 조회</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">장바구니 0</a></li>
+            </ul>
+        </div>
+        
+        <!-- 1-2. 메인 네비게이션 -->
+        <nav class="global-nav">
+            <h1 class="logo">
+                <a href="./img/build_images/logo.png">상하농원</a>
+            </h1>
+            <ul class="nav-list">
+                <li><a href="./intro.html">농원소개</a></li>
+                <li><a href="./build.html">짓다</a></li>
+                <li><a href="./play.html">놀다</a></li>
+                <li><a href="./store1.html">먹다</a></li>
+                <li><a href="./news.html">농원이야기</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. 본문 영역 시작 -->
+    <main>
+        <!-- 2-1. 메인 비주얼 영역 (Hero Image) -->
+        <section class="hero-section">
+            <h2>짓다</h2>
+            <!-- 현재 페이지의 위치 표시 -->
+            <div class="page-indicator">
+                <span>🏠</span> &gt; <span>짓다</span> &gt; <span>햄공방</span>
+            </div>
+        </section>
+
+        <!-- 2-2. 서브 메뉴 영역 (공방 리스트) -->
+        <div id="sub-menu">
+            <!-- 가로로 나열될 메뉴 - <ul> -->
+            <ul class="sub-list">
+                <!-- 지금은 디자인 반영 못하지만 일단 활성화 상태 표시를 위한 active 클래스  -->
+                <li class="active"><a href="#">햄공방</a></li>
+                <li><a href="#">과일공방</a></li>
+                <li><a href="#">빵공방</a></li>
+                <li><a href="#">발효공방</a></li>
+                <li><a href="#">참기름공방</a></li>
+                <li><a href="#">치즈공방</a></li>
+            </ul>
+        </div>
+
+        <!-- 2-3. 공방 소개 텍스트 영역 -->
+        <section class="intro-section">
+            <h3>깨끗한 원재료 그대로 햄공방</h3>
+            <p>냉장 순돈육과 12시간 정성들인 염지로 만든 햄</p>
+        </section>
+
+        <!-- 2-4. 공방 상세 설명 및 생산일정 통합 영역 -->
+        <!-- grid 적용을 위한 section -->
+        <section class="detail-and-schedule-section">
+            
+            <!-- [첫 번째 줄] -->
+            <!-- Flexbox -> 좌(이미지) 우(텍스트) (!!부모박스) -->
+            <div class="content-row">
+                <!-- 왼쪽 소시지 만드는 기계 이미지 -->
+                <div class="image-area">
+                    <img src="./img/build_images/workshop0101.jpg" alt="소시지 작업">
+                </div>
+                
+                <!-- 오른쪽 녹색 바탕 설명 -->
+                <!-- 배경색 처리->green-bg 클래스 추가 -->
+                <div class="text-area green-bg">
+                    <img src="./img/build_images/workshop0103.jpg" alt="소시지">
+                    <p>천연케이싱으로 육즙이 풍부한<br>소시지와 12시간 이상 염지하여<br>깊은 맛을 내는 베이컨으로<br>고기보다 더 맛있는 햄을 경험해보세요</p>
+                </div>
+            </div>
+
+            <!-- [두 번째 줄] -->
+            <!-- 좌(텍스트/표) 우(이미지) -->
+            <div class="content-row">
+                <!-- 왼쪽: 갈색 바탕 생산일정 -->
+                <div class="schedule-area brown-bg">
+                    <h3>금주 생산일정</h3>
+                    
+                    <!-- 일정표 테이블 -->
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>일</th>
+                                <th>월</th>
+                                <th>화</th>
+                                <th>수</th>
+                                <th>목</th>
+                                <th>금</th>
+                                <th>토</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 텍스트 대신 체크(V) 이미지?? -->
+                            <tr>
+                                <td><img src="" alt="v"></td>
+                                <td><img src="" alt="v"></td>
+                                <td><img src="" alt="v"></td>
+                                <td><img src="" alt="v"></td>
+                                <td><img src="" alt="v"></td>
+                                <td><img src="" alt="v"></td>
+                                <td><img src="" alt="v"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p class="notice">시설 견학은 농원운영 시간 내 상시 가능하고<br>시즌 및 공휴일의 경우 시설이 운휴될 수 있습니다</p>
+                </div>
+                
+                <!-- 오른쪽 베이컨 이미지 -->
+                <div class="image-area">
+                    <img src="./img/build_images/workshop0102.jpg" alt="베이컨">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2-5. 주요 제품 영역 -->
+        <section class="products-section">
+            <h3>주요 제품</h3>
+            <!-- 나열된 목록이므로 <ul> 사용 - Flexbox로 정렬 -->
+            <ul class="product-list">
+                <li>
+                    <img src="./img/build_images/food1.jpg" alt="브랏부어스트">
+                    <p>브랏부어스트</p>
+                </li>
+                <li>
+                    <img src="./img/build_images/food2.jpg" alt="프랑크프루터">
+                    <p>프랑크프루터</p>
+                </li>
+                <li>
+                    <img src="./img/build_images/food3.jpg" alt="바이스부어스트">
+                    <p>바이스부어스트</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 2-6. 공방 영상 영역 -->
+        <section class="video-section">
+            
+            <!-- Flexbox -> 좌(영상) 우(정보 패널)로 나란히 배치할 부모 박스 -->
+            <div class="video-container">
+                
+                <!-- 왼쪽: 실제 유튜브 영상 영역 -->
+                <div class="video-area">
+                    <!-- 유튜브 퍼오기 링크 - 그대로 넣어도 되나?? -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DzLJF08clzo?si=EZxU7-0PTj5Nv47M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <!-- 오른쪽: 주황색 바탕의 텍스트 및 아이콘 영역 -->
+                <!-- 배경색 처리를 위해 orange-bg 클래스 -->
+                <div class="info-area orange-bg">
+                    <h3>공방영상</h3>
+                    <p>상하농원 햄공방</p>
+                    <!-- 하단의 비디오 카메라 아이콘 -->
+                    <img src="" alt="비디오 아이콘">
+                </div>                
+            </div>            
+        </section>
+    </main>
+
+
+    <!-- 하단 푸터 -->
+    <!-- 내부 요소들을 가로로 배치하기 위해 안에 컨테이너 하나 크게 잡기 -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <!-- [열 1] 로고, 저작권 -->
+            <div class="footer-logo-area">
+                <h2 class="footer-logo">
+                    <img src="./img/build_images/logo-footer.svg" alt="상하농원">
+                </h2>
+                <div class="copyright-info">
+                    <p>@ 2024 SANGHA FARM CO. ALL RIGHTS RESERVED</p>
+                    <p>상하농원(유)은 매일유업(주)과의 제휴를 통해 공동으로 서비스를 운영하고 있습니다.</p>
+                </div>
+            </div>
+
+            <!-- [열 2] 사이트 정책, 주요 링크 -->
+            <!-- 세로로 나열된 링크 - <ul> 태그 -->
+            <ul class="footer-links">
+                <li><a href="#">입점/제휴문의</a></li>
+                <li><a href="#">인재채용</a></li>
+                <li><a href="#">이용약관</a></li>
+                <!-- 개인정보취급방침 <strong> 태그나 클래스로 강조? -->
+                <li><a href="#" class="highlight"><strong>개인정보취급방침</strong></a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">윤리 HOT-LINE</a></li>
+            </ul>
+
+            <!-- [열 3] 회사 기본 정보 -->
+            <!-- address 시맨틱 태그 -->
+            <address class="company-info">
+                <p>전라북도 고창군 상하면 상하농원길 11-23</p>
+                <p>대표 : 권태훈</p>
+                <p>개인정보 보호 책임자 : 권태훈</p>
+                <p>사업자등록번호 : 415-86-00211</p>
+                <p>통신판매업신고번호 : 제2016-4780085-30-2-00015호</p>
+                <p>상담이용시간 : 09:00~18:00</p>
+                <p>농원운영시간 : 연중무휴 09:30~21:00</p>
+            </address>
+
+            <!-- [열 4] 고객센터 연락처 -->
+            <div class="cs-center">
+                <!-- 고객센터번호 -->
+                <div class="cs-item">
+                    <img src="" alt="전화 아이콘">
+                    <strong>1522-3698</strong>
+                    <span>고객센터</span>
+                </div>
+                <!-- 빌리지 예약번호 -->
+                <div class="cs-item">
+                    <img src="" alt="헤드셋 아이콘">
+                    <strong>063-563-6611</strong>
+                    <span>빌리지 예약</span>
+                </div>
+            </div>
+
+            <!-- [열 5] 앱 다운로드 QR 코드 -->
+            <div class="app-download">
+                <strong>상하농원 앱 다운로드</strong>
+                <div class="qr-codes">
+                    <div class="qr-item">
+                        <img src="./img/build_images/qr_aos.svg" alt="AOS 다운로드 QR코드">
+                        <span>AOS</span>
+                    </div>
+                    <div class="qr-item">
+                        <img src="./img/build_images/qr_ios.svg" alt="IOS 다운로드 QR코드">
+                        <span>IOS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
